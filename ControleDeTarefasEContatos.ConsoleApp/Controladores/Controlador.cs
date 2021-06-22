@@ -176,12 +176,12 @@ namespace ControleDeTarefasEContatos.ConsoleApp.Controlador
         }
         #endregion
 
-        #region Metodos Virtuais
+        #region Metodos abstract
         public abstract string Tabela { get;  }
         public abstract string Valores { get;  }
         public abstract string Atualizar { get; }
-        public virtual void Inserir(SqlCommand comandoInsercao, T registro) { }
-        public virtual void Editar(SqlCommand comandoEdicao, int id, T registro) { }
+        public abstract void Inserir(SqlCommand comandoInsercao, T registro);
+        public abstract void Editar(SqlCommand comandoEdicao, int id, T registro);
         #endregion
     }
 }
