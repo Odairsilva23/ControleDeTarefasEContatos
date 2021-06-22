@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace ControleDeTarefasEContatos.ConsoleApp.Controlador
 {
-    public  class Controlador<T> where T : EntidadeBase
+    public abstract class Controlador<T> where T : EntidadeBase
     {
         public bool InserirRegistro(T registro)
         {
@@ -177,9 +177,9 @@ namespace ControleDeTarefasEContatos.ConsoleApp.Controlador
         #endregion
 
         #region Metodos Virtuais
-        public virtual string Tabela { get; }
-        public virtual string Valores { get; }
-        public virtual string Atualizar { get; }
+        public abstract string Tabela { get;  }
+        public abstract string Valores { get;  }
+        public abstract string Atualizar { get; }
         public virtual void Inserir(SqlCommand comandoInsercao, T registro) { }
         public virtual void Editar(SqlCommand comandoEdicao, int id, T registro) { }
         #endregion
