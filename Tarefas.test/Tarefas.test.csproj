@@ -65,6 +65,10 @@
       <Project>{32b042de-f016-43e7-9076-dea237d591b8}</Project>
       <Name>ControleDeTarefasEContatos.ConsoleApp</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SRC\SRC.csproj">
+      <Project>{2b2fdbf2-9cbe-4907-b886-d0b966f42c66}</Project>
+      <Name>SRC</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

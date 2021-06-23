@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{32B042DE-F016-43E7-9076-DEA237D591B8}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ControleDeTarefasEContatos.ConsoleApp</RootNamespace>
-    <AssemblyName>ControleDeTarefasEContatos.ConsoleApp</AssemblyName>
+    <ProjectGuid>{2B2FDBF2-9CBE-4907-B886-D0B966F42C66}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SRC</RootNamespace>
+    <AssemblyName>SRC</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,21 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Controladores\Controlador.cs" />
+    <Compile Include="Controladores\ControladorContato.cs" />
+    <Compile Include="Controladores\ControladorTarefa.cs" />
+    <Compile Include="Dominios\Contato.cs" />
+    <Compile Include="Dominios\EntidadeBase.cs" />
+    <Compile Include="Dominios\Tarefa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Telas\TelaBase.cs" />
-    <Compile Include="Telas\TelaContato.cs" />
-    <Compile Include="Telas\TelaPrincipal.cs" />
-    <Compile Include="Telas\TelaTarefa.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SRC\SRC.csproj">
-      <Project>{2b2fdbf2-9cbe-4907-b886-d0b966f42c66}</Project>
-      <Name>SRC</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
